@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<nav class='fixed w-full top-0 z-10 bg-light-1 dark:bg-dark-1 border-b border-border'>
+  <div class='flex items-center justify-between px-4 xl:max-w-6xl lg:max-w-4xl md:max-w-2xl mx-auto'>
+    <a href='/' class='py-4'>
+      <div class='text-black dark:text-white text-3xl font-bold'>
+        Devs<span
+          class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'
+          >Clan</span
+        >
+      </div>
+    </a>
+    <button class='h-6 w-6' id='themeBtn' aria-label='toggle-theme'>
+      <Icon name='mdi:white-balance-sunny' class='hover:text-main-1 dark:hidden' />
+      <Icon name='bi:moon-fill' class='hover:text-main-1 hidden dark:block' />
+    </button>
+  </div>
+</nav>
+
+<script>
+  document.getElementById('themeBtn').addEventListener('click', () => {
+    if (localStorage.theme === 'light') {
+      localStorage.theme = 'dark';
+      document.documentElement.className = 'dark';
+    } else {
+      localStorage.theme = 'light';
+      document.documentElement.className = 'light';
+    }
+  });
+</script>

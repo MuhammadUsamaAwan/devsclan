@@ -1,0 +1,37 @@
+---
+import RotatingCard from '../ui/RotatingCard.astro';
+---
+
+<section class='min-h-[calc(100vh-68px)] flex items-center border-b border-border py-14'>
+  <div class='text-center'>
+    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
+      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
+        Projects
+      </span>
+    </div>
+    <h2 class='text-4xl font-bold mb-6 dark:text-white text-black'>
+      A Selection of Our Preferred Projects<br /> That We Have Developed for Our Clients
+    </h2>
+    <p class='text-lg mb-8'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe!
+      Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!
+    </p>
+    <div class='flex items-center justify-center flex-col xl:flex-row space-y-6 xl:space-x-6'>
+      <RotatingCard
+        title='Project 1'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project1.jpg'
+      />
+      <RotatingCard
+        title='Project 2'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project2.jpg'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+      />
+    </div>
+  </div>
+</section>
