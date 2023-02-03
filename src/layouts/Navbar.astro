@@ -83,8 +83,7 @@ import { Icon } from 'astro-icon';
   });
   document.getElementById('closeBtn')?.addEventListener('click', () => {
     if (mobileMenu) {
-      mobileMenu.classList.remove('-translate-x-0');
-      mobileMenu.classList.remove('opacity-100');
+      mobileMenu.classList.remove('-translate-x-0', 'opacity-100');
     }
   });
 </script>
