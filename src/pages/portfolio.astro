@@ -1,0 +1,111 @@
+---
+import RotatingCard from '../components/ui/RotatingCard.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='DevsClan | Portfolio'>
+  <section class='py-14'>
+    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>Our Portfolio</h1>
+    <div class='flex justify-center space-x-4 mb-10'>
+      <input checked type='radio' name='filter' id='all' class='hidden peer/all' />
+      <label
+        for='all'
+        class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold peer-checked/all:text-dark-1 dark:peer-checked/all:bg-main-1'
+        >All</label
+      >
+      <input type='radio' name='filter' id='web' class='hidden peer/web' />
+      <label
+        for='web'
+        class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold peer-checked/web:text-dark-1 dark:peer-checked/web:bg-main-1'
+        >Web</label
+      >
+      <input type='radio' name='filter' id='mobile' class='hidden peer/mobile' />
+      <label
+        for='mobile'
+        class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold peer-checked/mobile:text-dark-1 dark:peer-checked/mobile:bg-main-1'
+        >Mobile</label
+      >
+      <input type='radio' name='filter' id='ar' class='hidden peer/ar' />
+      <label
+        for='ar'
+        class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold peer-checked/ar:text-dark-1 dark:peer-checked/ar:bg-main-1'
+        >AR</label
+      >
+      <input type='radio' name='filter' id='vr' class='hidden peer/vr' />
+      <label
+        for='vr'
+        class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold peer-checked/vr:text-dark-1 dark:peer-checked/vr:bg-main-1'
+        >VR</label
+      >
+    </div>
+
+    <div class='grid [grid-template-columns:repeat(auto-fit,minmax(18.75rem,1fr))] gap-6 mb-14'>
+      <RotatingCard
+        title='Project 1'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project1.jpg'
+        slug='project1'
+      />
+      <RotatingCard
+        title='Project 2'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project2.jpg'
+        slug='project2'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+      <RotatingCard
+        title='Project 3'
+        description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe! Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!'
+        image='/project3.jpg'
+        slug='project3'
+      />
+    </div>
+  </section>
+</Layout>
