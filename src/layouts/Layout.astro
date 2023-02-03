@@ -61,6 +61,14 @@ const { title } = Astro.props;
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('reveal', entry.isIntersecting);
+    });
+  });
+  const elements = document.querySelectorAll('.hide');
+  elements.forEach(el => observer.observe(el));
 </script>
 
 <style is:global>
@@ -76,5 +84,19 @@ const { title } = Astro.props;
   }
   .box-shadow-1:hover {
     box-shadow: 0 0 20px 5px rgba(251, 83, 67, 0.2);
+  }
+  .hide {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hide {
+      transition: all 1s;
+    }
   }
 </style>
