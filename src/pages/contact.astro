@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon';
+---
+
+<Layout title='Contact Us | Devsclan'>
+  <section class='py-14'>
+    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
+      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
+        Contact Us
+      </span>
+    </div>
+    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>We'd Love To Hear From You</h1>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div class='bg-light-1 dark:bg-dark-4 py-5 px-8 rounded-lg hover:-translate-y-1 duration-300'>
+        <Icon name='mdi:phone' class='h-10 w-10 text-main-1 mb-2' />
+        <h2 class='text-black dark:text-white font-semibold text-lg mb-2'>Contact Phone Number</h2>
+        <p>UK: <a href='tel:+447724510122' class='hover:text-main-1 hover:underline'>+44 772 4510122</a></p>
+        <p>Pakistan: <a href='tel:+923125137702' class='hover:text-main-1 hover:underline'>+92 312 5137702</a></p>
+      </div>
+      <div class='bg-light-1 dark:bg-dark-4 py-5 px-8 rounded-lg hover:-translate-y-1 duration-300'>
+        <Icon name='mdi:email' class='h-10 w-10 text-main-1 mb-2' />
+        <h2 class='text-black dark:text-white font-semibold text-lg mb-2'>Email Address</h2>
+        <a href='mailto:devsclaninfo@gmail.com' class='hover:text-main-1 hover:underline'>devsclaninfo@gmail.com</a>
+      </div>
+      <div class='bg-light-1 dark:bg-dark-4 py-5 px-8 rounded-lg hover:-translate-y-1 duration-300'>
+        <Icon name='mdi:account-supervisor' class='h-10 w-10 text-main-1 mb-2' />
+        <h2 class='text-black dark:text-white font-semibold text-lg mb-2'>Social</h2>
+        <div class='flex space-x-5'>
+          <a href='/' target='_blank' aria-label='facebook'>
+            <Icon name='mdi:facebook' class='h-6 w-6' />
+          </a>
+          <a href='/' target='_blank' aria-label='twitter'>
+            <Icon name='mdi:twitter' class='h-6 w-6' />
+          </a>
+          <a href='https://www.linkedin.com/company/devsclan/' target='_blank' aria-label='linkedin'>
+            <Icon name='mdi:linkedin' class='h-6 w-6' />
+          </a>
+          <a href='/' target='_blank' aria-label='instagram'>
+            <Icon name='mdi:instagram' class='h-6 w-6' />
+          </a>
+          <a href='/' target='_blank' aria-label='youtube'>
+            <Icon name='mdi:youtube' class='h-6 w-6' />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

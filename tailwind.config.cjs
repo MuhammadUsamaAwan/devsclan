@@ -12,6 +12,7 @@ module.exports = {
       'dark-1': 'rgb(6,6,6)',
       'dark-2': 'rgba(6,6,6,0.7)',
       'dark-3': 'hsla(0,0%,100%,0.1)',
+      'dark-4': '#0f0f11',
       'light-1': '#f5f8fa',
       'light-2': '#d8d8d8',
       border: 'hsla(0,0%,100%,0.1)',
