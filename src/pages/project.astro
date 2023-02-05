@@ -5,28 +5,34 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='DevsClan | Project 1'>
   <section class='py-14'>
-    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>Project 1</h1>
-    <p class='mb-10'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus blanditiis hic tenetur saepe!
-      Pariatur molestiae nihil officiis aperiam ducimus temporibus, cumque totam odit voluptatibus!
+    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
+      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
+        Project Showcase
+      </span>
+    </div>
+    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>DeepAR PhotoEditing App</h1>
+    <p class='mb-10 text-center'>
+      DeepAR offers you fun AR filters and 3D masks that integrate seamlessly into your mobile application and allow
+      your users to add AR effects to their video calls, capture videos with flashy sunglasses, and much more
     </p>
     <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Features</h2>
-    <ul class='grid grid-cols-3 gap-2 mb-6'>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Lorem</li>
+    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10'>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">AR Experience</li>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">3D Marks</li>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Add Effects to Images</li>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Add Effects to Videos</li>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">User Authentication</li>
+      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Capture Videos</li>
     </ul>
     <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Technologies Used</h2>
-    <ul class='grid grid-cols-3 gap-2 mb-6'>
-      <li><Icon name='react' class='w-10 h-10' /></li>
-      <li><Icon name='react' class='w-10 h-10' /></li>
-      <li><Icon name='react' class='w-10 h-10' /></li>
-      <li><Icon name='react' class='w-10 h-10' /></li>
-      <li><Icon name='react' class='w-10 h-10' /></li>
-      <li><Icon name='react' class='w-10 h-10' /></li>
+    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10'>
+      <li class='flex items-center space-x-2'><Icon name='flutter' class='w-10 h-10' /><span>Flutter</span></li>
+      <li class='flex items-center space-x-2'><Icon name='node' class='w-10 h-10' /><span>Node</span></li>
+      <li class='flex items-center space-x-2'><Icon name='firebase' class='w-10 h-10' /><span>Firebase</span></li>
+      <li class='flex items-center space-x-2'><Icon name='android' class='w-10 h-10' /><span>Android</span></li>
+      <li class='flex items-center space-x-2'><Icon name='apple' class='w-10 h-10' /><span>Apple</span></li>
+      <li class='flex items-center space-x-2'><Icon name='unity' class='w-10 h-10' /><span>Unity</span></li>
     </ul>
+    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Showcase</h2>
   </section>
 </Layout>
