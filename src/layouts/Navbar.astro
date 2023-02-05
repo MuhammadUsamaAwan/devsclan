@@ -85,4 +85,8 @@ import { Icon } from 'astro-icon';
       mobileMenu.classList.remove('-translate-x-0', 'opacity-100');
     }
   });
+  const links = document.querySelectorAll('li a');
+  links.forEach((link: HTMLAnchorElement) => {
+    if (link.pathname === window.location.pathname) link.classList.add('text-main-1');
+  });
 </script>
