@@ -4,15 +4,15 @@ export interface Props {
   description: string;
   image: string;
   slug: string;
-  dataBtn?: string;
+  dataFilter?: string;
 }
 
-const { title, description, image, slug, dataBtn } = Astro.props;
+const { title, description, image, slug, dataFilter } = Astro.props;
 ---
 
 <div
   class='relative w-[18.75rem] h-[18.75rem] [prespective-62.5rem] group text-white mx-auto duration-1000'
-  data-btn={dataBtn}>
+  data-filter={dataFilter}>
   <div
     class='absolute w-full h-full [transform-style:preserve-3d] duration-700 group-hover:[transform:rotateY(190deg)]'>
     <div>
