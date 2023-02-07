@@ -96,7 +96,7 @@ import { Icon } from 'astro-icon';
     (document.getElementById('btn') as HTMLButtonElement).disabled = true;
     document.getElementById('btnLoading').classList.remove('hidden');
     document.getElementById('btnText').classList.add('hidden');
-    const res = await fetch('http://localhost:3001/api/email', {
+    const res = await fetch('https://devsclan-backend.vercel.app/api/email', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
