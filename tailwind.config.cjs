@@ -20,6 +20,7 @@ module.exports = {
       'main-2': '#fb5343',
       'main-3': '#6549d5',
       'main-4': '#e33fa1',
+      danger: '#dc2626',
     },
   },
   darkMode: 'class',
