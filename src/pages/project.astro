@@ -1,10 +1,10 @@
 ---
-import { Icon } from 'astro-icon';
-import Layout from '../layouts/Layout.astro';
-import 'blaze-slider/dist/blaze.css';
+import { Icon } from 'astro-icon'
+import Layout from '../layouts/Layout.astro'
+import 'blaze-slider/dist/blaze.css'
 ---
 
-<Layout title='DevsClan | Project 1'>
+<Layout title='Project 1 | DevsClan'>
   <section class='py-14'>
     <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
       <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
@@ -62,9 +62,9 @@ import 'blaze-slider/dist/blaze.css';
 </Layout>
 
 <script>
-  import BlazeSlider from 'blaze-slider';
+  import BlazeSlider from 'blaze-slider'
 
-  const slider = document.querySelector('.blaze-slider') as HTMLElement;
+  const slider = document.querySelector('.blaze-slider') as HTMLElement
   new BlazeSlider(slider, {
     all: {
       slidesToShow: 3,
@@ -76,5 +76,5 @@ import 'blaze-slider/dist/blaze.css';
     '(max-width: 640px)': {
       slidesToShow: 1,
     },
-  });
+  })
 </script>

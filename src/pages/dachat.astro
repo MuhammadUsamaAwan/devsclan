@@ -1,84 +1,27 @@
 ---
-import { Icon } from 'astro-icon';
-import Layout from '../layouts/Layout.astro';
-import 'blaze-slider/dist/blaze.css';
+import ProjectShowcase from '../components/project/ProjectShowcase.astro'
 ---
 
-<Layout title='DevsClan | DaChat'>
-  <section class='py-14'>
-    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
-      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
-        Project Showcase
-      </span>
-    </div>
-    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>DaChat</h1>
-    <p class='mb-10 text-center'>
-      Real time chat application. Join and leave chat rooms, see room participants, read/unread messages, insert emojis,
-      see who is typing and much more...
-      <a href='https://github.com/MuhammadUsamaAwan/dachat' class='underline hover:text-main-1' target='_blank'
-        >Visit Site</a
-      >
-    </p>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Features</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10'>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Join/Leave Rooms</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">See Participants</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Get message about who left & joined room</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Send Emojis</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Get notified when someone is typing</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Read Unread Messages</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Notifcation Sounds</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Responsive Design</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">And Much More...</li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Technologies Used</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10'>
-      <li class='flex items-center space-x-2'><Icon name='node' class='w-10 h-10' /><span>Node.js</span></li>
-      <li class='flex items-center space-x-2'><Icon name='expressjs' class='w-10 h-10' /><span>Express.js</span></li>
-      <li class='flex items-center space-x-2'><Icon name='socket' class='w-10 h-10' /><span>Socket.io</span></li>
-      <li class='flex items-center space-x-2'><Icon name='tailwind' class='w-10 h-10' /><span>TailwindCSS</span></li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Showcase</h2>
-    <div class='blaze-slider mb-14'>
-      <div class='blaze-container'>
-        <div class='blaze-track-container'>
-          <div class='blaze-track'>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project3.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</Layout>
-
-<script>
-  import BlazeSlider from 'blaze-slider';
-
-  const slider = document.querySelector('.blaze-slider') as HTMLElement;
-  new BlazeSlider(slider, {
-    all: {
-      slidesToShow: 3,
-      enableAutoplay: true,
-    },
-    '(max-width: 768px)': {
-      slidesToShow: 2,
-    },
-    '(max-width: 640px)': {
-      slidesToShow: 1,
-    },
-  });
-</script>
+<ProjectShowcase
+  title='Image Hub'
+  description='Real time chat application. Join and leave chat rooms, see room participants, read/unread messages, insert emojis, see who is typing and much more...'
+  codeLink='https://github.com/MuhammadUsamaAwan/dachat'
+  features={[
+    'Join/Leave Rooms',
+    'See Participants',
+    'Get notified about who left & joined room',
+    'Send Emojis',
+    'Get notified when someone is typing',
+    'Read Unread Messages',
+    'Notifcation Sounds',
+    'Responsive Design',
+    'And Much More...',
+  ]}
+  technologies={[
+    { icon: 'node', title: 'Node.js' },
+    { icon: 'expressjs', title: 'Express.js' },
+    { icon: 'socket', title: 'Socket.io' },
+    { icon: 'tailwind', title: 'TailwindCSS' },
+  ]}
+  images={['dachat (1).webp', 'dachat (2).webp', 'dachat (3).webp']}
+/>

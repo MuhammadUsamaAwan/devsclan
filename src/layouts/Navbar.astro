@@ -1,9 +1,9 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon'
 ---
 
 <nav class='fixed w-full top-0 z-10 bg-light-1 dark:bg-dark-1 border-b border-border'>
-  <div class='flex items-center justify-between px-4 xl:max-w-6xl lg:max-w-4xl md:max-w-2xl mx-auto'>
+  <div class='flex items-center justify-between px-4 xl:max-w-6xl 2xl:max-w-7xl lg:max-w-4xl md:max-w-2xl mx-auto'>
     <a href='/' class='py-4 flex items-center space-x-0.5'>
       <img src='/logo.png' alt='logo' width='26' height='26' />
       <div class='text-black dark:text-white text-3xl font-bold'>
@@ -39,7 +39,8 @@ import { Icon } from 'astro-icon';
 </nav>
 <aside
   class='bg-light-1 dark:bg-dark-1 fixed inset-0 w-80 h-full z-20 -translate-x-80 duration-500 opacity-0'
-  id='mobileMenu'>
+  id='mobileMenu'
+>
   <div class='border-b border-border py-4 flex justify-between items-center px-4'>
     <a href='/' class='flex items-center space-x-0.5'>
       <img src='/logo.png' alt='logo' width='26' height='26' />
@@ -66,27 +67,27 @@ import { Icon } from 'astro-icon';
 <script>
   document.getElementById('themeBtn').addEventListener('click', () => {
     if (localStorage.theme === 'light') {
-      localStorage.theme = 'dark';
-      document.documentElement.className = 'dark';
+      localStorage.theme = 'dark'
+      document.documentElement.className = 'dark'
     } else {
-      localStorage.theme = 'light';
-      document.documentElement.className = 'light';
+      localStorage.theme = 'light'
+      document.documentElement.className = 'light'
     }
-  });
-  const mobileMenu = document.getElementById('mobileMenu');
+  })
+  const mobileMenu = document.getElementById('mobileMenu')
   document.getElementById('menuBtn')?.addEventListener('click', () => {
     if (mobileMenu) {
-      mobileMenu.classList.toggle('-translate-x-0');
-      mobileMenu.classList.toggle('opacity-100');
+      mobileMenu.classList.toggle('-translate-x-0')
+      mobileMenu.classList.toggle('opacity-100')
     }
-  });
+  })
   document.getElementById('closeBtn')?.addEventListener('click', () => {
     if (mobileMenu) {
-      mobileMenu.classList.remove('-translate-x-0', 'opacity-100');
+      mobileMenu.classList.remove('-translate-x-0', 'opacity-100')
     }
-  });
-  const links = document.querySelectorAll('li a');
+  })
+  const links = document.querySelectorAll('li a')
   links.forEach((link: HTMLAnchorElement) => {
-    if (link.pathname === window.location.pathname) link.classList.add('text-main-1');
-  });
+    if (link.pathname === window.location.pathname) link.classList.add('text-main-1')
+  })
 </script>

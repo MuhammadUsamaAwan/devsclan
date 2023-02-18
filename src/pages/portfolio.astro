@@ -1,6 +1,6 @@
 ---
-import RotatingCard from '../components/ui/RotatingCard.astro';
-import Layout from '../layouts/Layout.astro';
+import RotatingCard from '../components/ui/RotatingCard.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Portfolio | DevsClan'>
@@ -59,7 +59,7 @@ import Layout from '../layouts/Layout.astro';
       />
       <RotatingCard
         title='ATC - Tees'
-        description='An e-commerce website with categories, sub-categories, products with filtering and sorting, individual team stores, with card and paypal payment and a design lab to customize exiting project or design product from scratch using Next.js, Prisma, tRPC, NextAuth and tailwindCSS.'
+        description='An e-commerce website with categories, sub-categories, products with filtering, sorting & pagination, multiple team stores, with card and paypal payment and a design lab to customize exiting project or design product from scratch.'
         image='/atctees.webp'
         slug='atctees'
         dataFilter='web'
@@ -111,20 +111,20 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <script>
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const images = document.querySelectorAll('.relative');
+  const filterBtns = document.querySelectorAll('.filter-btn')
+  const images = document.querySelectorAll('.relative')
   filterBtns.forEach(filterBtn =>
     filterBtn.addEventListener('click', () => {
-      filterBtns.forEach(el => el.classList.remove('text-dark-1', 'dark:bg-main-1'));
-      filterBtn.classList.add('text-dark-1', 'dark:bg-main-1');
+      filterBtns.forEach(el => el.classList.remove('text-dark-1', 'dark:bg-main-1'))
+      filterBtn.classList.add('text-dark-1', 'dark:bg-main-1')
       images.forEach(image => {
         // @ts-ignore
         if (filterBtn.dataset.filter !== 'all' && image.dataset.filter !== filterBtn.dataset.filter) {
-          image.classList.add('hidden');
+          image.classList.add('hidden')
         } else {
-          image.classList.remove('hidden');
+          image.classList.remove('hidden')
         }
-      });
+      })
     })
-  );
+  )
 </script>

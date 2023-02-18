@@ -1,84 +1,30 @@
 ---
-import { Icon } from 'astro-icon';
-import Layout from '../layouts/Layout.astro';
-import 'blaze-slider/dist/blaze.css';
+import ProjectShowcase from '../components/project/ProjectShowcase.astro'
 ---
 
-<Layout title='DevsClan | ChatGPT Clone'>
-  <section class='py-14'>
-    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
-      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
-        Project Showcase
-      </span>
-    </div>
-    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>ChatGPT Clone</h1>
-    <p class='mb-10 text-center'>
-      Select any trained model from OpenAI and get the answer to any question, features OpenAI integration, react server
-      components, google authentication, firebase to store conversations, optimitic updates, real time DB.
-      <a href='https://chatgpt-clone-pi.vercel.app/' class='underline hover:text-main-1' target='_blank'>Visit Site</a>
-    </p>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Features</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10'>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">OpenAI API Integration</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Firebase to Store User Chats</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Delete Chats</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Real Time Database</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Google Authentication</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Responsive Design</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Caching Using SWR</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">React Server Components</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Next 13 App Directory</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">And Much More...</li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Technologies Used</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10'>
-      <li class='flex items-center space-x-2'><Icon name='next' class='w-10 h-10' /><span>Next.js</span></li>
-      <li class='flex items-center space-x-2'><Icon name='firebase' class='w-10 h-10' /><span>Firebase</span></li>
-      <li class='flex items-center space-x-2'><Icon name='typescript' class='w-10 h-10' /><span>TypeScript</span></li>
-      <li class='flex items-center space-x-2'><Icon name='tailwind' class='w-10 h-10' /><span>TailwindCSS</span></li>
-      <li class='flex items-center space-x-2'><Icon name='vercel' class='w-10 h-10' /><span>Vercel</span></li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Showcase</h2>
-    <div class='blaze-slider mb-14'>
-      <div class='blaze-container'>
-        <div class='blaze-track-container'>
-          <div class='blaze-track'>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project3.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</Layout>
-
-<script>
-  import BlazeSlider from 'blaze-slider';
-
-  const slider = document.querySelector('.blaze-slider') as HTMLElement;
-  new BlazeSlider(slider, {
-    all: {
-      slidesToShow: 3,
-      enableAutoplay: true,
-    },
-    '(max-width: 768px)': {
-      slidesToShow: 2,
-    },
-    '(max-width: 640px)': {
-      slidesToShow: 1,
-    },
-  });
-</script>
+<ProjectShowcase
+  title='ChatGPT Clone'
+  description='Select any trained model from OpenAI and get the answer to any question, features OpenAI integration, react server components, google authentication, firebase to store conversations, optimitic updates, real time DB.'
+  siteLink='https://chatgpt-clone-pi.vercel.app/'
+  codeLink='https://github.com/MuhammadUsamaAwan/chatgpt-clone'
+  features={[
+    'OpenAI API Integration',
+    'Firebase to Store User Chats',
+    'Delete Chats',
+    'Real Time Database',
+    'Google Authentication',
+    'Responsive Design',
+    'Caching Using SWR',
+    'React Server Components',
+    'Next 13 App Directory',
+    'And Much More...',
+  ]}
+  technologies={[
+    { icon: 'next', title: 'Next.js' },
+    { icon: 'firebase', title: 'Firebase' },
+    { icon: 'typescript', title: 'TypeScript' },
+    { icon: 'tailwind', title: 'TailwindCSS' },
+    { icon: 'vercel', title: 'Vercel' },
+  ]}
+  images={['chatgpt (1).webp', 'chatgpt (2).webp', 'chatgpt (3).webp']}
+/>

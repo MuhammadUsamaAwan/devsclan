@@ -1,85 +1,29 @@
 ---
-import { Icon } from 'astro-icon';
-import Layout from '../layouts/Layout.astro';
-import 'blaze-slider/dist/blaze.css';
+import ProjectShowcase from '../components/project/ProjectShowcase.astro'
 ---
 
-<Layout title='DevsClan | Twitter Clone'>
-  <section class='py-14'>
-    <div class='dark:bg-dark-3 px-4 py-1 rounded-lg font-bold w-max mx-auto mb-3'>
-      <span class='[-webkit-background-clip:text] bg-gradient-to-tr from-main-3 via-main-4 to-main-2 text-transparent'>
-        Project Showcase
-      </span>
-    </div>
-    <h1 class='text-4xl font-bold mb-6 dark:text-white text-black text-center'>ATC - Tees</h1>
-    <p class='mb-10 text-center'>
-      Small scale twitter clone with user authentication, post, like and unlike tweet, cursor page pagination, relative
-      time with local updates, seeding data using fakerJS.
-      <a href='https://github.com/MuhammadUsamaAwan/twitter-t3' class='underline hover:text-main-1' target='_blank'
-        >Visit Site</a
-      >
-    </p>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Features</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-3 mb-10'>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Post Tweets</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Like/Unlike Tweet</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Cursor Page Pagination</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Relative Time With Local Updates</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Seeding Using Faker JS</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Optimistic Updates</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">User Authentication</li>
-      <li class="before:content-['✓'] before:mr-1.5 before:text-main-1">Responsive Design</li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Technologies Used</h2>
-    <ul class='grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10'>
-      <li class='flex items-center space-x-2'><Icon name='next' class='w-10 h-10' /><span>Next.js</span></li>
-      <li class='flex items-center space-x-2'><Icon name='prisma' class='w-10 h-10' /><span>Prisma</span></li>
-      <li class='flex items-center space-x-2'><Icon name='sqlite-icon' class='w-10 h-10' /><span>SQlite</span></li>
-      <li class='flex items-center space-x-2'><Icon name='trpc' class='w-10 h-10' /><span>tRPC</span></li>
-      <li class='flex items-center space-x-2'><Icon name='typescript' class='w-10 h-10' /><span>TypeScript</span></li>
-      <li class='flex items-center space-x-2'><Icon name='tailwind' class='w-10 h-10' /><span>TailwindCSS</span></li>
-    </ul>
-    <h2 class='text-2xl font-bold mb-3 dark:text-white text-black'>Showcase</h2>
-    <div class='blaze-slider mb-14'>
-      <div class='blaze-container'>
-        <div class='blaze-track-container'>
-          <div class='blaze-track'>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project3.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project1.jpg' alt='project1' width='300' height='300' />
-            </div>
-            <div class='grid place-content-center bg-dark-4'>
-              <img src='project2.jpg' alt='project1' width='300' height='300' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</Layout>
-
-<script>
-  import BlazeSlider from 'blaze-slider';
-
-  const slider = document.querySelector('.blaze-slider') as HTMLElement;
-  new BlazeSlider(slider, {
-    all: {
-      slidesToShow: 3,
-      enableAutoplay: true,
-    },
-    '(max-width: 768px)': {
-      slidesToShow: 2,
-    },
-    '(max-width: 640px)': {
-      slidesToShow: 1,
-    },
-  });
-</script>
+<ProjectShowcase
+  title='Twitter Clone'
+  description='Small scale twitter clone with user authentication, post, like and unlike tweet, cursor page pagination, relative time with local updates, seeding data using fakerJS.'
+  codeLink='https://github.com/MuhammadUsamaAwan/twitter-t3'
+  features={[
+    'Post Tweets',
+    'Like/Unlike Tweet',
+    'Cursor Page Pagination',
+    'Relative Time With Local Updates',
+    'Seeding Using Faker JS',
+    'Optimistic Updates',
+    'User Authentication',
+    'Responsive Design',
+  ]}
+  technologies={[
+    { icon: 'next', title: 'Next.js' },
+    { icon: 'prisma', title: 'Prisma' },
+    { icon: 'sqlite-icon', title: 'SQLite' },
+    { icon: 'trpc', title: 'tRPC' },
+    { icon: 'typescript', title: 'TypeScript' },
+    { icon: 'tailwind', title: 'TailwindCSS' },
+    { icon: 'vercel', title: 'Vercel' },
+  ]}
+  images={['twitter (1).webp', 'twitter (2).webp', 'twitter (3).webp']}
+/>
